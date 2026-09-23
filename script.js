@@ -22,7 +22,7 @@ const shortLife = life => `${life.amount} ${({jour:"j",semaine:"sem",mois:"mois"
 const lifeYears = life => life.amount * ({jour: 1 / 365, semaine: 7 / 365, mois: 1 / 12, an: 1})[life.unit];
 // Une vie qui se termine dans quelques jours ne peut pas se conclure « de vieillesse ».
 function randomDeath() {
-  if (randomInt(4) < 3) return RIDICULOUS_DEATHS[randomInt(RIDICULOUS_DEATHS.length)];
+  if (randomInt(2) === 0) return DARK_DEATHS[randomInt(DARK_DEATHS.length)];
   const options = lifeYears(state.players[state.index].life) >= 60
     ? REALISTIC_DEATHS
     : REALISTIC_DEATHS.filter(item => !item.startsWith("de vieillesse") && !item.startsWith("après une longue vie"));
@@ -93,7 +93,7 @@ function renderTurn() {
   $("wheel-type").textContent = deathPhase ? "ROUE N° 2 · LA FIN" : "ROUE N° 1 · LE TEMPS";
   $("phase-kicker").textContent = deathPhase ? "02 — LA FIN" : "01 — LA DURÉE";
   $("phase-title").textContent = deathPhase ? "Comment se termine ton histoire ?" : "Combien de temps vas-tu vivre ?";
-  $("phase-description").textContent = deathPhase ? `${DEATHS.length} fins possibles. Trois sur quatre sont complètement ridicules.` : "De 1 jour à 100 ans, en jours, semaines, mois ou années.";
+  $("phase-description").textContent = deathPhase ? `${DEATHS.length} fins possibles. Une sur deux relève de l'humour noir.` : "De 1 jour à 100 ans, en jours, semaines, mois ou années.";
   $("result-card").hidden = true; $("spin-button").hidden = false; $("spin-button").disabled = false;
   $("spin-button").innerHTML = 'Lancer la roue <span aria-hidden="true">↗</span>';
   $("continue-button").hidden = true; $("spin-hint").hidden = false;
