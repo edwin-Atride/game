@@ -1,6 +1,6 @@
 # La Roue du Destin
 
-Jeu de soirée en français : ajoutez 2 à 20 joueurs, faites tourner une roue pour leur durée de vie fictive (de 1 jour à 100 ans), puis une seconde roue pour leur fin. Le jeu comporte **335 fins distinctes** inspirées de situations plausibles. La première roue possède **1 383 résultats libellés** en jours (1–31), semaines (1–52), mois (1–1 200) ou années (1–100). Elle affiche le résultat dans l'unité tirée : « 48 mois » reste « 48 mois ». Un récapitulatif termine la partie.
+Jeu de soirée en français : ajoutez 2 à 20 joueurs, faites tourner une roue pour leur durée de vie fictive (de 1 jour à 100 ans), puis une seconde roue pour leur fin. Le jeu comporte **364 fins distinctes : 273 ridicules (75 %) et 91 plausibles (25 %)**. La première roue possède **1 383 résultats libellés** en jours (1–31), semaines (1–52), mois (1–1 200) ou années (1–100). Elle affiche le résultat dans l'unité tirée : « 48 mois » reste « 48 mois ». Un récapitulatif termine la partie.
 
 ## Lancer en local
 
@@ -16,4 +16,4 @@ Les deux roues et tous les résultats fonctionnent directement dans le navigateu
 
 ## Modifier les fins
 
-Éditez les groupes dans `deaths.js`. Chaque chaîne est une fin possible. Les tirages des durées se règlent dans la fonction `randomLife` de `script.js`.
+Éditez `RIDICULOUS_DEATHS` et `REALISTIC_DEATHS` dans `deaths.js`. Chaque chaîne est une fin possible. Les tirages des durées se règlent dans la fonction `randomLife` de `script.js`.
