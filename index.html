@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#12101e">
-  <meta name="description" content="La Roue du Destin : un jeu de soirée absurde où chaque joueur découvre sa durée de vie et sa fin improbable.">
+  <meta name="description" content="La Roue du Destin : un jeu de soirée où chaque joueur découvre sa durée de vie et une fin tirée parmi des centaines de scénarios.">
   <title>La Roue du Destin — Le jeu</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="deaths.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
     <section class="hero" aria-labelledby="title">
       <div class="eyebrow"><span class="spark">✦</span> LE HASARD A LE DERNIER MOT <span class="spark">✦</span></div>
       <h1 id="title">Combien de temps<br><em>te reste-t-il ?</em></h1>
-      <p class="intro">Ajoutez vos joueurs. Tournez les roues. Découvrez une fin plus ou moins glorieuse. <strong>Tout est fictif, évidemment.</strong></p>
+      <p class="intro">Ajoutez vos joueurs. Tournez les roues. Découvrez combien de temps il leur reste et comment leur histoire se termine. <strong>Tout est fictif, évidemment.</strong></p>
     </section>
 
     <section id="setup" class="panel setup-panel" aria-labelledby="setup-title">
@@ -48,7 +49,7 @@
         <div class="action-side">
           <span id="phase-kicker" class="action-kicker">01 — LA DURÉE</span>
           <h3 id="phase-title">Combien de temps vas-tu vivre ?</h3>
-          <p id="phase-description" class="muted">De 1 jour à 100 ans. La roue décide pour toi.</p>
+          <p id="phase-description" class="muted">De 1 jour à 100 ans, en jours, semaines, mois ou années.</p>
           <div id="result-card" class="result-card" aria-live="polite" hidden><span id="result-label" class="result-label">LE VERDICT</span><strong id="result-value"></strong><p id="result-detail"></p></div>
           <button id="spin-button" class="button button-primary button-spin" type="button">Lancer la roue <span aria-hidden="true">↗</span></button>
           <button id="continue-button" class="button button-outline" type="button" hidden>Continuer <span aria-hidden="true">→</span></button>
@@ -61,12 +62,12 @@
     <section id="final" class="panel final-panel" hidden aria-labelledby="final-title">
       <span class="step-tag">FIN DE PARTIE</span>
       <h2 id="final-title">Le destin a <em>parlé.</em></h2>
-      <p class="muted">Voici le résumé de cette partie. Qui a eu la fin la plus absurde ?</p>
+      <p class="muted">Voici le résumé de cette partie. Le hasard a décidé pour tout le monde.</p>
       <div id="results-list" class="results-list"></div>
       <button id="again-button" class="button button-primary" type="button">Nouvelle partie <span aria-hidden="true">↗</span></button>
     </section>
 
-    <footer class="footer"><span>LA ROUE DU DESTIN © 2026</span><span>UN JEU ABSURDE, À NE PAS PRENDRE AU SÉRIEUX ☺</span></footer>
+    <footer class="footer"><span>LA ROUE DU DESTIN © 2026</span><span>UN JEU FICTIF, À NE PAS PRENDRE AU SÉRIEUX ☺</span></footer>
   </main>
 </body>
 </html>
